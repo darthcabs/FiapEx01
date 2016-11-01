@@ -17,6 +17,7 @@ namespace Fiap.Exemplo01.MVC.Web.Models
         [Display(Name = "Possui necessidades especiais?")]
         public bool NecessidadesEspeciais { get; set; }
 
+        [Display(Name = "Estado civil")]
         public string EstadoCivil { get; set; }
 
         [Display(Name = "Data de Nascimento")]
