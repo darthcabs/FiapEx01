@@ -1,0 +1,19 @@
+﻿@model Fiap.Exemplo01.MVC.Web.Models.Produto
+@{
+    ViewBag.Title = "Sucesso";
+}
+
+<h2>Sucesso</h2>
+
+<div class="alert alert-success">
+    @TempData["mensagem"]
+</div>
+
+<p>Nome: @ViewBag.prod.Nome, Valor: @ViewBag.prod.Valor, Quantidade: @ViewBag.prod.Quantidade</p>
+
+<div class="alert alert-info">
+    Produto: @Model.Nome
+    Quantidade: @Model.Quantidade
+    Valor: @Model.Valor
+</div>
+

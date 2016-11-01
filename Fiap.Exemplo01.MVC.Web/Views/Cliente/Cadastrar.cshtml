@@ -1,0 +1,41 @@
+﻿@model Fiap.Exemplo01.MVC.Web.Models.Cliente
+@{
+    ViewBag.Title = "Cadastrar cliente";
+}
+<br />
+@if (ViewBag.mensagem != null)
+{
+    <div class="alert alert-dismissable alert-success">
+        @TempData["mensagem"]
+        <p><a href="/Cliente/Listar">Listar</a></p>
+    </div>
+}
+
+<h2>Cadastrar cliente</h2>
+<br />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.Nome)
+        @Html.TextBoxFor(c => c.Nome, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Idade)
+        @Html.TextBoxFor(c => c.Idade, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Credito)
+        @Html.TextBoxFor(c => c.Credito, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.DataNascimento)
+        @Html.TextBoxFor(c => c.DataNascimento, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.NecessidadesEspeciais)
+        @Html.LabelFor(c => c.NecessidadesEspeciais)
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-default" />
+    </div>
+}

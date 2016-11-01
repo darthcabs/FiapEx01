@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Cadastrar produto";
+}
+<br />
+@if (ViewBag.mensagem != null)
+{
+    <div class="alert alert-dismissable alert-success">
+        @ViewBag.mensagem
+        <p><a href="/Produto/Listar">Listar</a></p>
+    </div>
+}
+
+<h2>Cadastrar produto</h2>
+
+<form method="post" action="cadastrar">
+    <div class="form-group">
+        <label for="id-nome">Nome:</label>
+        <input type="text" name="nome" id="id-nome" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="id-valor">Valor:</label>
+        <input type="text" name="valor" id="id-valor" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="id-qtde">Quantidade:</label>
+        <input type="text" name="quantidade" id="id-qtde" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-default"/>
+    </div>
+</form>
