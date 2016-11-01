@@ -3,13 +3,7 @@
     ViewBag.Title = "Cadastrar cliente";
 }
 <br />
-@if (TempData["mensagem"] != null)
-{
-    <div class="alert alert-dismissable alert-success">
-        @TempData["mensagem"]
-        <p><a href="/Cliente/Listar">Listar</a></p>
-    </div>
-}
+@Helper.Message(TempData["mensagem"] as string)
 
 <h2>Cadastrar cliente</h2>
 <br />
@@ -40,6 +34,11 @@
         @Html.DropDownListFor(c => c.EstadoCivil, ViewBag.estados as SelectList, new { @class="form-control"})
     </div>
     <div class="form-group">
-        <input type="submit" value="Cadastrar" class="btn btn-default" />
+        @Helper.Submit("Salvar","btn btn-default")
     </div>
+}
+
+@section scripts
+{
+    <!-- <script......></script> -->
 }
